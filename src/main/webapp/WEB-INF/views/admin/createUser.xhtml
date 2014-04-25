@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:a4j="http://richfaces.org/a4j">
+
+<h:head>
+</h:head>
+<h:body>
+    <h:form>
+        <rich:panel styleClass="top">
+            <h:panelGrid columns="3">
+                <h:outputLabel for="name" value="Name: *" />
+                <h:inputText id="name" value="#{userBean.name}" required="true" label="Name">
+                    <f:validateLength minimum="2" />
+                </h:inputText>
+                <h:message for="name" />
+
+                <h:outputLabel for="loginName" value="LoginName: *" />
+                <h:inputText id="loginName" value="#{userBean.loginName}" required="true" label="LoginName"/>
+                <h:message for="loginName" />
+
+                <h:outputLabel for="password" value="Password: *" />
+                <h:inputSecret id="password" value="#{userBean.password}" required="true" label="Password"/>
+                <h:message for="password" />
+            </h:panelGrid>
+        </rich:panel>
+        <h:commandButton value="Invoke listener by binding">
+            <a4j:actionListener binding="#{userBean.saveUser}"/>
+            <f:ajax render="messages"/>
+        </h:commandButton>
+    </h:form>
+</h:body>
+</html>
