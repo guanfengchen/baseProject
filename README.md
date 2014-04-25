@@ -1,0 +1,4 @@
+baseProject
+===========
+
+My base project
