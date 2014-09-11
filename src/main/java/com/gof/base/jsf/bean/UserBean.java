@@ -16,7 +16,7 @@ public class UserBean {
     private String password;
 
     public void saveUser(){
-        System.out.println("User saved===============");
+        System.out.println("User saved======  =========");
     }
 
     public String getName() {
