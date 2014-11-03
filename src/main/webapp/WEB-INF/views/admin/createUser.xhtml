@@ -11,7 +11,7 @@
 <h:head>
 </h:head>
 <h:body>
-    <h:form>
+    <h:form id="aaa">
         <rich:panel styleClass="top">
             <h:panelGrid columns="3">
                 <h:outputLabel for="name" value="Name: *" />
@@ -31,7 +31,7 @@
         </rich:panel>
         <h:commandButton value="Invoke listener by binding">
             <a4j:actionListener binding="#{userBean.saveUser}"/>
-            <f:ajax render="messages"/>
+            <!--<f:ajax render="messages"/>  -->
         </h:commandButton>
     </h:form>
 </h:body>

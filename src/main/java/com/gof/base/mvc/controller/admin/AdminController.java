@@ -17,4 +17,9 @@ public class AdminController {
     public String createUser() {
         return "admin/createUser";
     }
+
+    @RequestMapping(value="admin/primefacesIndex.htm", method = RequestMethod.GET)
+    public String primefacesIndex() {
+        return "admin/primefacesIndex";
+    }
 }
