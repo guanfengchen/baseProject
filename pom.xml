@@ -16,6 +16,11 @@
             <name>Prime Repo</name>
             <url>http://repository.primefaces.org</url>
         </repository>
+        <repository>
+            <id>maven-repo</id>
+            <name>Maven Repo</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
     </repositories>
 
 
@@ -28,10 +33,10 @@
         <richfaces.version>4.3.5.Final</richfaces.version>
         <jsf.version>2.1</jsf.version>
         <sun.faces.version>2.1.2</sun.faces.version>
-        <org.richfaces.bom.version>4.1.0.Final</org.richfaces.bom.version>
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <jstl.version>1.2</jstl.version>
         <primefaces.version>3.5</primefaces.version>
+        <poi.version>3.10.1</poi.version>
     </properties>
 
     <dependencies>
@@ -48,16 +53,6 @@
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
             <version>${primefaces.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.richfaces.ui</groupId>
-            <artifactId>richfaces-components-ui</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.richfaces.core</groupId>
-            <artifactId>richfaces-core-impl</artifactId>
         </dependency>
 
         <dependency>
@@ -153,19 +148,26 @@
             <version>1.7.2</version>
         </dependency>
 
-    </dependencies>
+        <!-- POI -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.richfaces</groupId>
-                <artifactId>richfaces-bom</artifactId>
-                <version>${org.richfaces.bom.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
+    </dependencies>
 
     <build>
         <finalName>baseProject</finalName>
