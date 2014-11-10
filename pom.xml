@@ -11,16 +11,28 @@
     <name>gof4 base app</name>
 
     <repositories>
-        <repository>
+        <!--<repository>
             <id>prime-repo</id>
             <name>Prime Repo</name>
             <url>http://repository.primefaces.org</url>
         </repository>
         <repository>
+            <id>apache-repo</id>
+            <name>Apache Repo</name>
+            <url>http://repository.apache.org/snapshots/</url>
+        </repository>
+        <repository>
+            <id>jboss-repo</id>
+            <name>Jboss Repo</name>
+            <url>http://repository.jboss.com/maven2/</url>
+        </repository>
+        <repository>
             <id>maven-repo</id>
             <name>Maven Repo</name>
-            <url>http://repo1.maven.org/maven2</url>
-        </repository>
+            <url>http://central.maven.org/maven2/</url>
+        </repository>   -->
+
+
     </repositories>
 
 
@@ -35,11 +47,20 @@
         <sun.faces.version>2.1.2</sun.faces.version>
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <jstl.version>1.2</jstl.version>
-        <primefaces.version>3.5</primefaces.version>
+        <primefaces.version>5.1</primefaces.version>
         <poi.version>3.10.1</poi.version>
+        <jfreechart.version>1.0.19</jfreechart.version>
     </properties>
 
     <dependencies>
+        <!-- jfreechart -->
+        <dependency>
+            <groupId>org.jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>${jfreechart.version}</version>
+        </dependency>
+
+
         <!-- 添加Servlet -->
         <dependency>
             <groupId>javax.servlet</groupId>
