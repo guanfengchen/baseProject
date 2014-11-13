@@ -59,7 +59,6 @@ public class PieChart extends Chart{
         PiePlot pieplot = (PiePlot) chart.getPlot();
         pieplot.setLabelGenerator(new StandardPieSectionLabelGenerator(
                 ("{0}: ({2})"), NumberFormat.getNumberInstance(), new DecimalFormat("0.00%")));
-        pieplot.setB
 
 //        PiePlot piePlot= (PiePlot) chart.getPlot();
 //        piePlot.setOutlinePaint(Color.WHITE);

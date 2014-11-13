@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+        function createPPT(){
+            var template = $("#templatePatch").val();
+            var report = $("#reportPatch").val();
+            //alert(template);
+            //alert(report);
+            var url = "http://localhost:8080/app/report/PPT.htm";
+            var data = {
+                templatePatch: template,
+                reportPatch: report
+            };
+            jQuery.ajax( {
+                url : url,
+                data : data,
+                type : "POST",
+                // 期待的返回值类型
+                dataType: "json",
+                complete : function(xhr,result) {
+                    alert("successful");
+                }
+            });
+        };
+    </script>
+</h:head>
+<h:body>
+    <form id="createPPT" >
+
+        templatePatch <input type="text" id="templatePatch" value="d:\bmw\template.pptx"/><br/>
+        reportPatch<input type="text" id="reportPatch" value="d:\bmw\report.pptx"/> <br/>
+        <input type="button" value="create" onclick="createPPT()"/>
+
+    </form>
+</h:body>
+</html>
